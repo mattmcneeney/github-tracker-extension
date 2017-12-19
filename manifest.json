@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Github Tracker Extension",
+  "description": "This extension highlights Pivotal Tracker stories that are in the finished state and link to a GitHub PR that has been merged.",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "https://github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.pivotaltracker.com/*"],
+      "js": ["run.js"]
+    }
+  ]
+}
